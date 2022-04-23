@@ -1,0 +1,139 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    height: 100vh;
+    padding: 10px;
+}
+
+.btn_control {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 3;
+} 
+
+.btn_control .btn_start {
+    position: absolute;
+    width: fit-content;
+    padding: 10px 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+    background-color: #f50;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info {
+    max-width: 900px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid rgb(0, 0, 200, 0.5);
+    border-bottom: none;
+}
+
+.info .name,
+.info .trie {
+    width: 50%;
+}
+
+.info .trie {
+    text-align: right;
+}
+
+.game_block_container {
+    max-width: 900px;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    background-color: #f6f6f6;
+    border: 4px solid rgb(0, 0, 200, 0.5);
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    /*display: grid;
+    grid-template: repeat(4, 200px) / repeat(4, 200px);
+    gap: 10px;*/
+}
+
+.game_block_container.no_click {
+    pointer-events: none;
+}
+
+.game_block_container .game_block {
+    flex: 1 0 200px;
+    height: 200px;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: transform .5s linear;
+    position: relative;
+    border: 4px solid rgb(0, 0, 200, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game_block.flipped, .game_block.has_match {
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.game_block .front {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+    z-index: 2;
+}
+
+.game_block .front::before {
+    content: "🤔";
+    font-size: 180px;
+}
+
+.game_block .back {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.game_block .back img {
+    width: 100%;
+    height: 100%;
+}
+
+.game_block .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .game_block_container {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}

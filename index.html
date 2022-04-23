@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Memory Game elzero" >
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./style.css" >
+</head>
+<body>
+  <section class="container">
+
+      <article class="btn_control">
+        <span class="btn_start">start Game</span>
+      </article>
+
+      <article class="info">  
+        <div class="name">
+          Hello: <span></span>
+        </div>
+        <div class="trie">
+          Wrong trie: <span>0</span>
+        </div>
+      </article>
+
+      <article class="game_block_container">
+            <div class="game_block" data-type="bird">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/bird.jpg" alt="" >
+                </div>
+            </div>
+            <div class="game_block" data-type="bird">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/bird.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="game_block" data-type="cate">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/cate.jpg" alt="">
+                </div>
+            </div>
+            <div class="game_block" data-type="cate">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/cate.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="game_block" data-type="checken">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/checken.jpg" alt="">
+                </div>
+            </div>
+            <div class="game_block" data-type="checken">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/checken.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="game_block" data-type="chien">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/chien.jpg" alt="">
+                </div>
+            </div>
+            <div class="game_block" data-type="chien">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/chien.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="game_block" data-type="duck">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/duck.jpg" alt="">
+                </div>
+            </div>
+            <div class="game_block" data-type="duck">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/duck.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="game_block" data-type="fich">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/fich.jpg" alt="">
+                </div>
+            </div>
+            <div class="game_block" data-type="fich">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/fich.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="game_block" data-type="grille">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/grille.jpg" alt="">
+                </div>
+            </div>
+            <div class="game_block" data-type="grille">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/grille.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="game_block" data-type="kity">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/kity.jpg" alt="">
+                </div>
+            </div>
+            <div class="game_block" data-type="kity">
+                <div class="front face"></div>
+                <div class="back face">
+                    <img src="imgs/kity.jpg" alt="">
+                </div>
+            </div>
+
+        </article>
+
+        <audio class="failed" src="sound/failed.mp3" preload="auto"></audio>
+        <audio class="success" src="sound/success.mp3" preload="auto"></audio>
+        <audio class="infinit" src="sound/success.mp3" preload="auto" loop></audio>
+        
+  </section>
+
+    <script src="./app.js"></script>
+</body>
+</html>
